@@ -17,14 +17,17 @@ concept Divisible = requires ( T a , std :: size_t n ) {
     { a / n } -> same_as <T >;
 };
 
-template < Addable T >
-T sum( C) {
-
-    T sum = begin(C);
-    for (const auto& x : C) {
-        sum += x;
-    }
-    return sum;
+template < Iterable C >
+requires Addable < typename C :: value_type >
+auto sum ( const C & container )
+{
+    using T = typename C :: value_type ;
+    T result {}; // Para tipos numericos (int , double , float )
+    // se inicializa en 0.
+    // Para clases se llama al constructor por defecto
+    for ( const auto & value : container )
+        result = result + value ;
+    return result ;
 }
 
 template < Divisible D>
@@ -34,10 +37,10 @@ D divi( D s , size_t n) {
     return d;
 }
 
-template < Iterable C >
+template < typename C >
 auto mean(C contenedor) {
 
-    auto suma = sum(contenedor);
+     auto suma = sum(contenedor);
     auto promedio =  divi(suma, contenedor.size());
 return promedio;
 }
@@ -46,4 +49,5 @@ int main() {
 
     vector <double> a{1.0,2.0,3.0};
     auto m = mean(a);
+    cout << m << endl ;
 }
