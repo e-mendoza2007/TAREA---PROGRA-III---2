@@ -57,7 +57,7 @@ auto mean(C contenedor) {
 
 int main() {
 
-    cout << "\n==== CASOS QUE NO COMPILAN ====\n";
+    cout << "==== CASOS QUE NO COMPILAN ====\n";
 
     vector<string> s1{"a","b","c"};
     mean(s1);

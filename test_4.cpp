@@ -40,6 +40,7 @@ auto maximo ( const C & container ) {
 
 
 template < typename M >
+requires Comparable<typename M::value_type, typename M::value_type>
 auto max( M conte ) {
 
     auto maximo_ = maximo(conte);

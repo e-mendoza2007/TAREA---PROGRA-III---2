@@ -71,6 +71,8 @@ auto varianza ( const C & container,auto promedio_ ) {
 
 
 template < typename T >
+requires Addable<typename T::value_type> &&
+         Divisible<typename T::value_type>
 auto variance( T conte ) {
 
     auto promedio = mean(conte);

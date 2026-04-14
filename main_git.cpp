@@ -71,6 +71,8 @@ auto varianza ( const C & container,auto promedio_ ) {
 
 
 template < typename T >
+requires Addable<typename T::value_type> &&
+         Divisible<typename T::value_type>
 auto variance( T conte ) {
 
     auto promedio = mean(conte);
@@ -95,6 +97,7 @@ auto maximo ( const C & container ) {
 
 
 template < typename M >
+requires Comparable<typename M::value_type, typename M::value_type>
 auto max( M conte ) {
 
     auto maximo_ = maximo(conte);

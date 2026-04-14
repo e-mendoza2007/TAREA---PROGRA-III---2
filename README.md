@@ -30,4 +30,19 @@
 
 ### Lo primero, Creamos una función varianza, que es similar a sum, solo que  ahora vamos a recibir el contenedor y el promedio, para que cada valor del contendor se reste con el promedio, y luego lo acumulamos o sumamos para poder caular el primer paso de la varianza.
 
-### Ya en la función variance, calculamos el promedio del contenedor recibido, y luego lo mandamos a varianza para calcular la suma de las potencias cuadradas de la resta con el promedio. Finalmente reutilizo el divi, osea la división entre el tamaño del vector, para calculart la varianza final.
+### Ya en la función variance, calculamos el promedio del contenedor recibido, y luego lo mandamos a varianza para calcular la suma de las potencias cuadradas de la resta con el promedio. Finalmente reutilizo el divi, osea la división entre el tamaño del vector, para calculart la varianza final. Por ver mejor el resultado lo redondeamos a dos decimales.
+
+![alt text](image-6.png)
+
+![alt text](image-7.png)
+
+### Prueba en caso que si funcionan...
+
+![alt text](image-8.png)
+
+### Casos en lo que no funciona.}
+
+## 4. Max (Hallar el maximo de el contenedor)
+![alt text](image-9.png)
+
+### 
