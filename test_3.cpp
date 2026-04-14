@@ -82,6 +82,9 @@ auto variance( T conte ) {
 
 int main() {
 
+
+     cout << "==== CASOS QUE NO COMPILAN ====\n";
+
     vector<string> contenedor{"hola", "programacion","laptop"};
     variance(contenedor);
 }

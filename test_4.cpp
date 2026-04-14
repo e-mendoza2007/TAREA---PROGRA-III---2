@@ -49,8 +49,9 @@ auto max( M conte ) {
 
 int main() {
 
+         cout << "==== CASOS QUE NO COMPILAN ====\n";
 
-        vector < std :: string > data {"a", "b", "c"};
+        vector <string > data {"a", "b", "c"};
         auto v =  max ( data ) ;
 
 
