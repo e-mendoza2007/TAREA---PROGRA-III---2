@@ -14,7 +14,7 @@ concept Addable = requires ( T a , T b ) {
     { a + b } -> same_as <T >;
 };
 template < typename T >
-concept Divisible = requires ( T a ,  size_t n ) {
+concept Divisible = requires ( T a , size_t n ) {
     { a / n } -> same_as <T >;
 };
 // añadimos un nuevo concep para poder verificar que dos numeros se pueden comparar, no string no char
@@ -45,6 +45,8 @@ D divi( D s , size_t n) {
 }
 
 template < typename C >
+requires Addable<typename C::value_type> &&
+         Divisible<typename C::value_type>
 auto mean(C contenedor) {
 
      auto suma = sum(contenedor);
@@ -100,19 +102,35 @@ auto max( M conte ) {
     return maximo_;
 }
 
+
+// Imprimir vector
+template <typename T>
+void imprimir(const vector<T>& v) {
+    for (const auto& x : v) {
+        cout << x << " ";
+    }
+    cout << endl;
+}
+
 int main() {
 
 
     cout << "################## Pregunta 2 ################\n";
     vector <double> a{1.0,2.0,3.0};
+    cout << "Vector: "<< endl;
+    imprimir(a);
     auto m = mean(a);
     cout << "Promedio: " << m << endl ;
     cout << "################## Pregunta 3 ################\n";
     vector<double> data{1.0,2.0,3.0};
+    cout << "Vector: "<< endl;
+    imprimir(data);
     auto v = variance(data);
     cout << "Varianza: " << v << endl ;
     cout << "################## Pregunta 4 ################\n";
     vector <double> b{1,2.7,0.3};
+    cout << "Vector: "<< endl;
+    imprimir(b);
     auto maximo_ = maximo(b);
     cout << "Maximo: " << maximo_ << endl ;
 }
