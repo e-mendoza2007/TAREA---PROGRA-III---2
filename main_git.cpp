@@ -14,7 +14,7 @@ concept Addable = requires ( T a , T b ) {
     { a + b } -> same_as <T >;
 };
 template < typename T >
-concept Divisible = requires ( T a , std :: size_t n ) {
+concept Divisible = requires ( T a ,  size_t n ) {
     { a / n } -> same_as <T >;
 };
 // añadimos un nuevo concep para poder verificar que dos numeros se pueden comparar, no string no char
