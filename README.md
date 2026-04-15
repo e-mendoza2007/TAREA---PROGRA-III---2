@@ -65,6 +65,11 @@
 
 ### Se creó un concepto propio llamado Transformable para restringir que la función de transformación retorne un valor convertible a double.
 
+### Casos de prueba:
+
+![alt text](image-17.png)
+
+
 ## 6. Variadic Templates y fold expresions
 
 ### Implementación de funciones que aceptan cualquier cantidad de argumentos utilizando templates variádicos y fold expressions. Se implementaron tres funciones: suma, media y máximo.
@@ -79,6 +84,10 @@ Calcula el promedio de todos los argumentos. Requiere que todos los argumentos s
 Encuentra el valor máximo entre todos los argumentos. Requiere que todos los argumentos sean comparables (concepto Comparable). Usa fold expression con operador coma.
 
 ![alt text](image-14.png)
+
+### Casos de prueba: 
+
+![alt text](image-18.png)
 
 ## 7. if constexpr
 
@@ -99,6 +108,10 @@ Flotantes: multiplica por 2.5
 Otros tipos: devuelve el valor sin cambios
 
 ![alt text](image-16.png)
+
+### Casos de prueba:
+
+![alt text](image%20-19.png)
 
 
 
