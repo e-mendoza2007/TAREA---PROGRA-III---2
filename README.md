@@ -56,3 +56,9 @@
 
 ![alt text](image-12.png)
 ### Ahora en test_4.cpp, se puede econtrar los casos en que no compila, por que le mandamos un vector de string.
+
+## 5. transform_reduce
+
+## 6. Variadic Templates y fold expresions
+
+## 7. if constexpr
