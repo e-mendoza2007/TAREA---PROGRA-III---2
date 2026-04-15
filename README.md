@@ -59,6 +59,46 @@
 
 ## 5. transform_reduce
 
+### Implementación de transform_reduce, una función que aplica una transformación a cada elemento de un contenedor y luego reduce los resultados sumándolos. Inspirada en el algoritmo homónimo de la STL.
+
+![alt text](image-13.png)
+
+### Se creó un concepto propio llamado Transformable para restringir que la función de transformación retorne un valor convertible a double.
+
 ## 6. Variadic Templates y fold expresions
 
+### Implementación de funciones que aceptan cualquier cantidad de argumentos utilizando templates variádicos y fold expressions. Se implementaron tres funciones: suma, media y máximo.
+
+#### suma_variadic
+Suma todos los argumentos recibidos usando fold expression con operador +.
+
+#### media_variadic
+Calcula el promedio de todos los argumentos. Requiere que todos los argumentos sean sumables (concepto Addable). Utiliza if constexpr para manejar correctamente enteros y flotantes.
+
+#### max_variadic
+Encuentra el valor máximo entre todos los argumentos. Requiere que todos los argumentos sean comparables (concepto Comparable). Usa fold expression con operador coma.
+
+![alt text](image-14.png)
+
 ## 7. if constexpr
+
+### Uso de if constexpr (C++17) para tomar decisiones en tiempo de compilación según el tipo de dato. Esto permite generar código diferente sin overhead en tiempo de ejecución.
+
+#### media_con_if
+Calcula el promedio de un contenedor. Si el tipo de dato es entero, convierte el resultado a double para evitar pérdida de precisión por truncamiento. Si es flotante o un tipo personalizado, utiliza la división directa.
+
+![alt text](image-15.png)
+
+#### procesar_numero
+Función de demostración que aplica diferente lógica según el tipo en tiempo de compilación:
+
+Enteros: multiplica por 2
+
+Flotantes: multiplica por 2.5
+
+Otros tipos: devuelve el valor sin cambios
+
+![alt text](image-16.png)
+
+
+
